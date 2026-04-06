@@ -1,0 +1,65 @@
+{
+  "arquivo": "teste_tracker.txt",
+  "senha_hint": "neb***",
+  "meta": {
+    "arquivo_original": "teste_tracker.txt",
+    "tamanho_original": 4616,
+    "total_fragmentos": 14,
+    "fragmentos_dados": 10,
+    "fragmentos_paridade": 4,
+    "nonce": "b4a24519faa869f5482f7273",
+    "tam_fragmento": 462
+  },
+  "mapa": {
+    "frag_00.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    },
+    "frag_01.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    },
+    "frag_02.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    },
+    "frag_03.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    },
+    "frag_04.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    },
+    "frag_05.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    },
+    "frag_06.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    },
+    "frag_07.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    },
+    "frag_08.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    },
+    "frag_09.bin": {
+      "no_id": "no_01",
+      "ip": "192.168.0.108",
+      "porta": 8000
+    }
+  }
+}
