@@ -1,0 +1,27 @@
+cat > .gitignore << EOF
+# Ambientes virtuais
+nebula-env/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dados gerados pelo app
+node_storage/
+tracker_db/
+fragmentos/
+recuperado_da_rede.txt
+reconstruido.txt
+teste*.txt
+
+# Configurações
+.env
+
+# Outros
+.DS_Store
+*.log
+EOF

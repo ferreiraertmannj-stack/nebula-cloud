@@ -1,9 +1,0 @@
-{
-  "arquivo_original": "teste.txt",
-  "tamanho_original": 2166,
-  "total_fragmentos": 14,
-  "fragmentos_dados": 10,
-  "fragmentos_paridade": 4,
-  "nonce": "44ca95b29a83ae0bb887196a",
-  "tam_fragmento": 217
-}
