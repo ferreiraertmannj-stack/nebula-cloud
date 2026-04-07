@@ -1,4 +1,3 @@
-cat > .gitignore << EOF
 # Ambientes virtuais
 nebula-env/
 venv/
@@ -10,13 +9,12 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Dados gerados pelo app
+# Dados gerados
 node_storage/
 tracker_db/
 fragmentos/
-recuperado_da_rede.txt
-reconstruido.txt
-teste*.txt
+recuperando/
+*.map.json
 
 # Configurações
 .env
@@ -24,4 +22,4 @@ teste*.txt
 # Outros
 .DS_Store
 *.log
-EOF
+*.txt

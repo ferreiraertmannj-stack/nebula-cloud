@@ -5,7 +5,7 @@ from fragmenter import fragmentar_arquivo, reconstruir_arquivo
 
 # ==================== CONFIGURAÇÃO ====================
 NOS = [
-    {"id": "no_01", "ip": "192.168.0.108", "porta": 8000, "tier": "platinum"},
+    {"id": "no_01", "ip": "127.0.0.1", "porta": 8000, "tier": "platinum"},
     # Adicione mais nós aqui (ex: Infinix Hot 50)
     # {"id": "no_02", "ip": "192.168.1.105", "porta": 8000, "tier": "platinum"},
 ]
@@ -26,7 +26,7 @@ def verificar_nos():
                 no["fragmentos"] = dados.get("fragmentos_armazenados", 0)
                 nos_online.append(no)
                 print(f"✅ Nó {no['id']} online — {dados.get('fragmentos_armazenados', 0)} fragmentos")
-        except:
+        except Exception as e:
             no["status"] = "offline"
             print(f"❌ Nó {no['id']} offline")
     return nos_online
@@ -103,12 +103,19 @@ def recuperar_arquivo(nome_arquivo: str, senha: str, saida: str):
                 with open(f"{pasta_recuperado}/{frag}", 'wb') as f:
                     f.write(r.content)
                 print(f"✅ {frag} recuperado")
-        except:
-            print(f"❌ Falha ao recuperar {frag}")
+        except Exception as e:
+            print(f"❌ Falha ao recuperar {frag}: {e}")
+
+    # Salvar metadados para reconstrução
+    with open(f"{pasta_recuperado}/meta.json", 'w') as f:
+        json.dump(registro["meta"], f, indent=2)
 
     # Reconstrói
-    reconstruir_arquivo(pasta_recuperado, senha, saida)
-    print(f"✅ Arquivo reconstruído com sucesso: {saida}")
+    try:
+        reconstruir_arquivo(pasta_recuperado, senha, saida)
+        print(f"✅ Arquivo reconstruído com sucesso: {saida}")
+    except Exception as e:
+        print(f"❌ Erro ao reconstruir arquivo: {e}")
 
 # ==================== MENU SIMPLES ====================
 if __name__ == "__main__":
